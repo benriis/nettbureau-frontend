@@ -1,7 +1,7 @@
 import { IForm } from "./types"
 
 export const postData = async (data: IForm) => {
-  const url:string = "https://heksemel.no/case/submit.php"
+  const url:any = process.env.REACT_APP_NETTBUREAU_URL;
   fetch(url, {
     method: "POST",
     headers: {
